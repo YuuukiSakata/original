@@ -15,6 +15,7 @@
 		06CCEB6A1C79A2FC00A6F2F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CCEB681C79A2FC00A6F2F0 /* LaunchScreen.storyboard */; };
 		06CCEB751C79A2FC00A6F2F0 /* originalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CCEB741C79A2FC00A6F2F0 /* originalTests.swift */; };
 		06CCEB801C79A2FC00A6F2F0 /* originalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CCEB7F1C79A2FC00A6F2F0 /* originalUITests.swift */; };
+		06CCEB8E1C79B20800A6F2F0 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CCEB8D1C79B20800A6F2F0 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		06CCEB7B1C79A2FC00A6F2F0 /* originalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = originalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CCEB7F1C79A2FC00A6F2F0 /* originalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = originalUITests.swift; sourceTree = "<group>"; };
 		06CCEB811C79A2FC00A6F2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CCEB8D1C79B20800A6F2F0 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				06CCEB5D1C79A2FC00A6F2F0 /* AppDelegate.swift */,
 				06CCEB5F1C79A2FC00A6F2F0 /* FirstViewController.swift */,
 				06CCEB611C79A2FC00A6F2F0 /* SecondViewController.swift */,
+				06CCEB8D1C79B20800A6F2F0 /* ThirdViewController.swift */,
 				06CCEB631C79A2FC00A6F2F0 /* Main.storyboard */,
 				06CCEB661C79A2FC00A6F2F0 /* Assets.xcassets */,
 				06CCEB681C79A2FC00A6F2F0 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				06CCEB621C79A2FC00A6F2F0 /* SecondViewController.swift in Sources */,
 				06CCEB5E1C79A2FC00A6F2F0 /* AppDelegate.swift in Sources */,
+				06CCEB8E1C79B20800A6F2F0 /* ThirdViewController.swift in Sources */,
 				06CCEB601C79A2FC00A6F2F0 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
