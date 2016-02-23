@@ -8,7 +8,6 @@
         <!--Set-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
                 <viewController id="9pv-A4-QxB" customClass="SecondViewController" customModule="original" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
@@ -18,14 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dy2-rZ-Yhx">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dy2-rZ-Yhx">
                                 <rect key="frame" x="38" y="209" width="244" height="129"/>
                                 <date key="date" timeIntervalSinceReferenceDate="477734167.26995498">
                                     <!--2016-02-21 07:56:07 +0000-->
                                 </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
-                                    <!--1970-01-01 11:00:00 +0000-->
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="441802800">
+                                    <!--2015-01-01 11:00:00 +0000-->
                                 </date>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NPH-bR-ovF">
                                 <rect key="frame" x="38" y="57" width="244" height="57"/>
@@ -59,16 +59,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="金額を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lg3-6p-bku">
-                                <rect key="frame" x="38" y="386" width="183" height="30"/>
+                                <rect key="frame" x="31" y="147" width="183" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HwW-Mb-xM3" appends="YES" id="DQh-Bf-z6g"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Set" image="first" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="moneyField" destination="Lg3-6p-bku" id="9sY-KM-uo3"/>
+                        <outlet property="picker" destination="Dy2-rZ-Yhx" id="COo-9s-MIL"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HwW-Mb-xM3">
+                    <connections>
+                        <action selector="tapView:" destination="9pv-A4-QxB" id="gEL-8Q-MPO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-34" y="-716"/>
         </scene>
@@ -155,6 +169,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="second" id="3Ty-ce-P2b"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="datetext" destination="GIE-Wu-ilp" id="YkG-0x-LjS"/>
+                        <outlet property="moneyLabel" destination="5PI-fJ-71e" id="wSg-11-YSh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEI-8Q-Zd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
