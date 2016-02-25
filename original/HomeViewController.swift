@@ -22,8 +22,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        // myTextFieldのデリゲートになる
     }
     
     override func viewWillAppear(animated: Bool) {
