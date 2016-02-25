@@ -17,16 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dy2-rZ-Yhx">
-                                <rect key="frame" x="38" y="260" width="252" height="75"/>
-                                <date key="date" timeIntervalSinceReferenceDate="477734167.26995498">
-                                    <!--2016-02-21 07:56:07 +0000-->
-                                </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="441802800">
-                                    <!--2015-01-01 11:00:00 +0000-->
-                                </date>
-                                <locale key="locale" localeIdentifier="ja_JP"/>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0w-4r-TOx">
                                 <rect key="frame" x="222" y="127" width="60" height="30"/>
                                 <state key="normal" title="更新する"/>
@@ -99,6 +89,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yAG-Sa-4tN">
+                                <rect key="frame" x="26" y="252" width="282" height="82"/>
+                                <date key="date" timeIntervalSinceReferenceDate="478096625.72544903">
+                                    <!--2016-02-25 12:37:05 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="473338800">
+                                    <!--2016-01-01 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -112,7 +112,6 @@
                         <outlet property="GoalField" destination="ME2-45-oWp" id="xCW-Py-62o"/>
                         <outlet property="MoneyField" destination="Lg3-6p-bku" id="yCE-uh-vR8"/>
                         <outlet property="SavingsMoneyField" destination="AhU-OZ-kvo" id="z0A-oH-Oed"/>
-                        <outlet property="picker" destination="Dy2-rZ-Yhx" id="WOY-AC-5cP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -178,7 +177,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIE-Wu-ilp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIE-Wu-ilp">
                                 <rect key="frame" x="108" y="117" width="124" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -227,6 +226,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="second" id="3Ty-ce-P2b"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="DeadlineLabel" destination="GIE-Wu-ilp" id="RNh-cQ-Ze0"/>
                         <outlet property="GoalLabel" destination="3TF-oY-8gC" id="BCw-qr-o3J"/>
                         <outlet property="MoneyLabel" destination="5PI-fJ-71e" id="szt-0O-4cN"/>
                         <outlet property="SavingsMoneyLabel" destination="c2I-NQ-tPD" id="V3G-Z0-8q2"/>

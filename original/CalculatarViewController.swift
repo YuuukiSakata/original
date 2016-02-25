@@ -72,7 +72,6 @@ class CalculatarViewController: UIViewController {
     @IBAction func plus(){
         //plusボタンを押した時に、labelに0が表示される
         label.text = "0"
-        
         oparation = 1
         number2 = number
         number = 0
@@ -80,8 +79,21 @@ class CalculatarViewController: UIViewController {
     
     @IBAction func minus(){
         label.text = "0"
-        
         oparation = 2
+        number2 = number
+        number = 0
+    }
+    
+    @IBAction func times(){
+        label.text = "0"
+        oparation = 3
+        number2 = number
+        number = 0
+    }
+    
+    @IBAction func devided(){
+        label.text = "0"
+        oparation = 4
         number2 = number
         number = 0
     }
@@ -96,6 +108,10 @@ class CalculatarViewController: UIViewController {
             label.text = String(number + number2)
         }else if oparation == 2{
             label.text = String(number2 - number)
+        }else if oparation == 3{
+            label.text = String(number * number2)
+        }else if oparation == 4{
+            label.text = String(number2 / number)
         }
     }
 }

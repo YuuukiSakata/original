@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetViewController: UIViewController, UITextFieldDelegate {
+class SetViewController: UIViewController, UITextFieldDelegate, UIToolbarDelegate {
     
     //目標
     @IBOutlet weak var GoalField: UITextView!
@@ -18,9 +18,6 @@ class SetViewController: UIViewController, UITextFieldDelegate {
     
     //貯金額
     @IBOutlet weak var SavingsMoneyField: UITextField!
-    
-    //日付
-    @IBOutlet weak var picker: UIDatePicker!
     
     //目標を更新
     @IBAction func GoalUpdate(){
@@ -34,7 +31,7 @@ class SetViewController: UIViewController, UITextFieldDelegate {
         ud.setObject(Int(MoneyField.text!), forKey: "MoneyUpdate")
     }
     
-    //貯金額を更新
+    //貯金合計額を更新
     @IBAction func SavingMoneyUpdate(){
         let ud2 = NSUserDefaults.standardUserDefaults()
         ud2.setObject(SavingsMoneyField.text, forKey: "SavingMoneyUpdate")
@@ -52,7 +49,7 @@ class SetViewController: UIViewController, UITextFieldDelegate {
         // 編集終了でキーボードを下げる
         self.view.endEditing(true)
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
