@@ -8,7 +8,7 @@
 
 import UIKit
 
-class fourthViewController: UIViewController {
+class CalculatarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
