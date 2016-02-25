@@ -105,9 +105,9 @@
 			children = (
 				06CCEB5D1C79A2FC00A6F2F0 /* AppDelegate.swift */,
 				06CCEB5F1C79A2FC00A6F2F0 /* HomeViewController.swift */,
-				06CCEB611C79A2FC00A6F2F0 /* SetViewController.swift */,
 				06CCEB8D1C79B20800A6F2F0 /* GraphViewController.swift */,
 				06D968141C7AA0EB009026A0 /* CalculatarViewController.swift */,
+				06CCEB611C79A2FC00A6F2F0 /* SetViewController.swift */,
 				06CCEB631C79A2FC00A6F2F0 /* Main.storyboard */,
 				06CCEB661C79A2FC00A6F2F0 /* Assets.xcassets */,
 				06CCEB681C79A2FC00A6F2F0 /* LaunchScreen.storyboard */,
