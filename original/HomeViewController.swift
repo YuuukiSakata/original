@@ -44,6 +44,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         let ud3 = NSUserDefaults.standardUserDefaults()
         let udId3 : AnyObject! = ud3.objectForKey("GoalUpdate")
         GoalLabel.text = String(udId3)
+        
+        //DatePickerから目標期限表示
+        let ud4 = NSUserDefaults.standardUserDefaults()
+        let udId4 : AnyObject! = ud4.objectForKey("DatePicker")
+        DeadlineLabel.text = String(udId4)
     }
     
     override func didReceiveMemoryWarning() {

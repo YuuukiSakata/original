@@ -54,19 +54,19 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今日は" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiA-EL-lKe">
-                                <rect key="frame" x="26" y="349" width="51" height="21"/>
+                                <rect key="frame" x="20" y="368" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="貯金しました" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KcO-yV-2mF">
-                                <rect key="frame" x="97" y="412" width="102" height="21"/>
+                                <rect key="frame" x="97" y="433" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3T-tb-Cki">
-                                <rect key="frame" x="252" y="376" width="17" height="21"/>
+                                <rect key="frame" x="252" y="412" width="17" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="目標金額を入力してください" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AhU-OZ-kvo">
-                                <rect key="frame" x="44" y="372" width="200" height="30"/>
+                                <rect key="frame" x="38" y="403" width="200" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -89,7 +89,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yAG-Sa-4tN">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yAG-Sa-4tN">
                                 <rect key="frame" x="26" y="252" width="282" height="82"/>
                                 <date key="date" timeIntervalSinceReferenceDate="478096625.72544903">
                                     <!--2016-02-25 12:37:05 +0000-->
@@ -99,6 +99,13 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="ja_JP"/>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKV-fH-1aJ">
+                                <rect key="frame" x="218" y="342" width="60" height="30"/>
+                                <state key="normal" title="更新する"/>
+                                <connections>
+                                    <action selector="DatePickerUpdate" destination="9pv-A4-QxB" eventType="touchUpInside" id="TAm-NC-UZl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -109,6 +116,7 @@
                     <tabBarItem key="tabBarItem" title="Set" image="first" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="DatePicker" destination="yAG-Sa-4tN" id="uGN-MD-4rn"/>
                         <outlet property="GoalField" destination="ME2-45-oWp" id="xCW-Py-62o"/>
                         <outlet property="MoneyField" destination="Lg3-6p-bku" id="yCE-uh-vR8"/>
                         <outlet property="SavingsMoneyField" destination="AhU-OZ-kvo" id="z0A-oH-Oed"/>

@@ -37,6 +37,15 @@ class SetViewController: UIViewController, UITextFieldDelegate, UIToolbarDelegat
         ud2.setObject(SavingsMoneyField.text, forKey: "SavingMoneyUpdate")
     }
     
+    //DatePicker
+    @IBOutlet weak var DatePicker: UIDatePicker!
+    
+    //DatePicerを更新
+    @IBAction func DatePickerUpdate(){
+        let ud4 = NSUserDefaults.standardUserDefaults()
+        ud4.setObject(DatePicker.date, forKey: "DatePicker")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
