@@ -43,6 +43,7 @@ class SetViewController: UIViewController, UITextFieldDelegate, UIToolbarDelegat
     //DatePicerを更新
     @IBAction func DatePickerUpdate(){
         let ud4 = NSUserDefaults.standardUserDefaults()
+        print(DatePicker.date)
         ud4.setObject(DatePicker.date, forKey: "DatePicker")
     }
     
