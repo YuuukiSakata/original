@@ -45,17 +45,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         let udId3 : AnyObject! = ud3.objectForKey("GoalUpdate")
         GoalLabel.text = String(udId3)
         
-        func format(date : NSDate, style : String) -> String{
-            let formatter = NSDateFormatter()
-            formatter.dateFormat = style
-            return formatter.stringFromDate(date)
-        }
-        
         //DatePickerから目標期限表示
         let ud4 = NSUserDefaults.standardUserDefaults()
         let udId4 : AnyObject! = ud4.objectForKey("DatePicker")
-       // DeadlineLabel.text = format(udId4, style: "yyyy年MM月dd日")
-         DeadlineLabel.text = String(udId4)
+        DeadlineLabel.text = String(udId4)
     }
     
     override func didReceiveMemoryWarning() {

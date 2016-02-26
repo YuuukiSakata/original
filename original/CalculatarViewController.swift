@@ -23,6 +23,11 @@ class CalculatarViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func select0(){
+        number = number*10 + 0
+        label.text = String(number)
+    }
+    
     @IBAction func select1(){
         number = number*10 + 1
         label.text = String(number)
