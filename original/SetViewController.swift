@@ -52,6 +52,7 @@ class SetViewController: UIViewController, UITextFieldDelegate, UIToolbarDelegat
         // Do any additional setup after loading the view, typically from a nib.
         MoneyField.delegate = self
         SavingsMoneyField.delegate = self
+        self.view.backgroundColor = UIColor.whiteColor()
     }
     
     // 画面タップでキーボードを下げる
