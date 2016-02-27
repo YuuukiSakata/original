@@ -24,6 +24,11 @@ class CalculatarViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
     }
     
+    @IBAction func select0(){
+        number = number*10 + 0
+        label.text = String(number)
+    }
+    
     @IBAction func select1(){
         number = number*10 + 1
         label.text = String(number)
