@@ -21,12 +21,20 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     //貯金額合計
     @IBOutlet weak var SavingsMoneyLabel: UILabel!
+    var SavingsMoney: Int = 0
+    
+    //残り日数
+    @IBOutlet weak var RemainDaysLabel: UILabel!
+    var RemainDays: Int = 0
+    
+    //残り金額
+    @IBOutlet weak var RemainMoneyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.cyanColor()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -34,24 +42,25 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         
         //目標額表示
         let ud = NSUserDefaults.standardUserDefaults()
-        let udId : AnyObject! = ud.objectForKey("MoneyUpdate")
+        let udId : AnyObject! = ud.objectForKey("MoneyUpdate") != nil
         MoneyLabel.text = String(udId)
         
         //貯金合計額表示
         let ud2 = NSUserDefaults.standardUserDefaults()
-        let udId2 : AnyObject! = ud2.objectForKey("SavingMoneyUpdate")
+        let udId2 : AnyObject! = ud2.objectForKey("SavingMoneyUpdate") != nil
         SavingsMoneyLabel.text = String(udId2)
         
         //目標表示
         let ud3 = NSUserDefaults.standardUserDefaults()
-        let udId3 : AnyObject! = ud3.objectForKey("GoalUpdate")
+        let udId3 : AnyObject! = ud3.objectForKey("GoalUpdate") != nil
         GoalLabel.text = String(udId3)
         
+        //DatePickerで日本時間表示
         func format(date : NSDate, style : String) -> String {
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
-            dateFormatter.dateFormat = style
-            return  dateFormatter.stringFromDate(date)
+            let formatter = NSDateFormatter()
+            formatter.locale = NSLocale(localeIdentifier: "ja_JP")
+            formatter.dateFormat = style
+            return  formatter.stringFromDate(date)
         }
         
         //DatePickerから目標期限表示

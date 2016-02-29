@@ -19,6 +19,7 @@ class SetViewController: UIViewController, UITextFieldDelegate, UIToolbarDelegat
     //貯金額
     @IBOutlet weak var SavingsMoneyField: UITextField!
     
+    
     //目標を更新
     @IBAction func GoalUpdate(){
         let ud3 = NSUserDefaults.standardUserDefaults()
@@ -52,7 +53,7 @@ class SetViewController: UIViewController, UITextFieldDelegate, UIToolbarDelegat
         // Do any additional setup after loading the view, typically from a nib.
         MoneyField.delegate = self
         SavingsMoneyField.delegate = self
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.cyanColor()
     }
     
     // 画面タップでキーボードを下げる
